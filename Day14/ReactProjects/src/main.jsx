@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { ThemeProvider } from "./ThemeContext";
+
+import { register } from './serviceWorkerRegistration';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <ThemeProvider>
@@ -10,3 +13,5 @@ createRoot(document.getElementById('root')).render(
   </ThemeProvider>,
   </StrictMode>,
 )
+
+register();
